@@ -1,0 +1,17 @@
+<div class="row mb-5">
+  <div class="col">
+    <input
+    #searchTerm
+    type="text"
+    name="search"
+    class="form-control"
+    placeholder="Buscar artista"
+    id="search"
+    (keyup)="buscar(searchTerm.value)"
+    >
+  </div>
+</div>
+
+<app-loading class="d-flex flex-row justify-content-center align-items-center" *ngIf="loading"></app-loading>
+
+<app-cards *ngIf="artists.length > 0" [items]="artists"></app-cards>

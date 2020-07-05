@@ -1,0 +1,3 @@
+<app-loading class="d-flex flex-row justify-content-center align-items-center" *ngIf="loading"></app-loading>
+
+<app-cards *ngIf="releases.length > 0" [items]="releases"></app-cards>
